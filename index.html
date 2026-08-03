@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2f9bd6">
 <title>かき氷 | N高キャンパスフェスティバル 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +31,9 @@
     background-attachment:fixed;
     line-height:1.9;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
   }
   .wrap{max-width:720px;margin:0 auto;padding:0 20px 60px;}
 
@@ -147,14 +151,40 @@
     letter-spacing:.08em;
   }
 
+  @media (max-width:768px){
+    .wrap{padding:0 16px 48px;}
+    header{padding:52px 16px 36px;}
+    .cup{font-size:4.4rem;}
+    h1{font-size:2.1rem;letter-spacing:.03em;}
+    h1 .jp{font-size:1.05rem;letter-spacing:.3em;}
+    .lead{font-size:.9rem;}
+    .section-title{font-size:1.25rem;margin:40px 0 20px;}
+    .menu-card{padding:20px 20px;border-radius:16px;}
+    .leader{padding:24px 20px;border-radius:16px;}
+  }
+
   @media (max-width:480px){
-    header{padding:44px 16px 32px;}
-    .cup{font-size:3.8rem;}
-    h1{font-size:1.9rem;}
-    h1 .jp{font-size:1rem;letter-spacing:.25em;}
-    .menu-card,.leader{padding:20px 18px;}
-    .row{flex-direction:column;gap:0;}
-    .row dt{flex:none;}
+    body{line-height:1.8;}
+    .wrap{padding:0 14px 44px;}
+    header{padding:40px 14px 28px;}
+    .cup{font-size:3.6rem;}
+    h1{font-size:1.7rem;word-break:break-word;}
+    h1 .jp{font-size:.95rem;letter-spacing:.22em;}
+    .section-title{font-size:1.15rem;letter-spacing:.08em;}
+    .menu-card,.leader{padding:18px 16px;}
+    .menu-name{font-size:1.05rem;}
+    .row{flex-direction:column;gap:2px;padding:6px 0;font-size:.9rem;}
+    .row dt{flex:none;font-size:.8rem;letter-spacing:.05em;}
+    .leader p{font-size:.98rem;}
+    .back{max-width:100%;padding:16px 18px;font-size:.95rem;}
+    footer{font-size:.82rem;margin-top:36px;}
+  }
+
+  @media (hover:none){
+    .menu-card:hover{transform:none;box-shadow:0 8px 24px var(--shadow);}
+    .back:hover{transform:none;}
+    .menu-card:active{transform:scale(.99);}
+    .back:active{transform:scale(.98);}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none !important;transition:none !important;}
