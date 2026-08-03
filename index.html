@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>かき氷 | N高キャンパスフェスティバル 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Bungee&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ice:#eaf6ff;
+    --ice-deep:#cfe9fb;
+    --frost:#ffffff;
+    --ink:#123b57;
+    --ink-soft:#4a7391;
+    --syrup-red:#ff4d6d;
+    --syrup-blue:#2f9bd6;
+    --syrup-green:#4fc48a;
+    --shadow:rgba(18,59,87,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Zen Maru Gothic',-apple-system,'Hiragino Kaku Gothic ProN',sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(circle at 15% 10%, #ffffff 0%, transparent 45%),
+      radial-gradient(circle at 85% 0%, #dff0ff 0%, transparent 40%),
+      linear-gradient(180deg,var(--ice) 0%, var(--ice-deep) 100%);
+    background-attachment:fixed;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px 60px;}
+
+  /* ===== ヘッダー ===== */
+  header{
+    text-align:center;
+    padding:64px 20px 48px;
+    position:relative;
+    overflow:hidden;
+  }
+  .cup{
+    font-size:5rem;
+    line-height:1;
+    margin-bottom:16px;
+    filter:drop-shadow(0 8px 14px var(--shadow));
+    animation:float 4s ease-in-out infinite;
+  }
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  h1{
+    font-family:'Bungee',cursive;
+    font-size:2.6rem;
+    letter-spacing:.06em;
+    color:var(--syrup-blue);
+    line-height:1.2;
+  }
+  h1 .jp{
+    display:block;
+    font-family:'Zen Maru Gothic',sans-serif;
+    font-size:1.15rem;
+    font-weight:700;
+    letter-spacing:.35em;
+    color:var(--ink);
+    margin-top:10px;
+  }
+  .lead{margin-top:16px;color:var(--ink-soft);font-size:.95rem;}
+
+  /* ===== 見出し ===== */
+  .section-title{
+    font-size:1.4rem;font-weight:700;
+    text-align:center;
+    margin:48px 0 24px;
+    letter-spacing:.12em;
+  }
+  .section-title::after{
+    content:"";display:block;
+    width:56px;height:4px;border-radius:4px;
+    margin:12px auto 0;
+    background:linear-gradient(90deg,var(--syrup-red),var(--syrup-blue),var(--syrup-green));
+  }
+
+  /* ===== メニュー ===== */
+  .menu-card{
+    background:var(--frost);
+    border-radius:18px;
+    padding:24px 26px;
+    margin-bottom:18px;
+    box-shadow:0 8px 24px var(--shadow);
+    border-top:5px solid var(--syrup-blue);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .menu-card:nth-child(3n+1){border-top-color:var(--syrup-red);}
+  .menu-card:nth-child(3n+2){border-top-color:var(--syrup-blue);}
+  .menu-card:nth-child(3n+3){border-top-color:var(--syrup-green);}
+  .menu-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px var(--shadow);}
+  .menu-name{
+    font-size:1.2rem;font-weight:700;
+    display:flex;align-items:center;gap:8px;
+  }
+  .menu-rule{
+    border:0;height:2px;
+    background:repeating-linear-gradient(90deg,var(--ice-deep) 0 8px,transparent 8px 14px);
+    margin:10px 0 14px;
+  }
+  .row{display:flex;gap:10px;font-size:.95rem;padding:4px 0;}
+  .row dt{
+    flex:0 0 5.5em;
+    font-weight:700;color:var(--ink-soft);
+  }
+  .row dd{flex:1;}
+
+  /* ===== リーダーからの一言 ===== */
+  .leader{
+    background:linear-gradient(135deg,#ffffff 0%,#f2faff 100%);
+    border-radius:18px;
+    padding:28px 26px;
+    box-shadow:0 8px 24px var(--shadow);
+    text-align:center;
+  }
+  .leader p{font-size:1.05rem;}
+
+  /* ===== 戻るリンク・フッター ===== */
+  .back{
+    display:block;
+    width:100%;max-width:320px;
+    margin:32px auto 0;
+    padding:15px 20px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:700;
+    color:#fff;
+    background:linear-gradient(135deg,var(--syrup-blue),#1d7fb4);
+    border-radius:999px;
+    box-shadow:0 8px 20px rgba(47,155,214,.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .back:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(47,155,214,.45);}
+  .back:focus-visible{outline:3px solid var(--syrup-red);outline-offset:3px;}
+  footer{
+    text-align:center;
+    margin-top:44px;
+    padding-top:22px;
+    border-top:1px dashed var(--ink-soft);
+    color:var(--ink-soft);
+    font-size:.9rem;
+    letter-spacing:.08em;
+  }
+
+  @media (max-width:480px){
+    header{padding:44px 16px 32px;}
+    .cup{font-size:3.8rem;}
+    h1{font-size:1.9rem;}
+    h1 .jp{font-size:1rem;letter-spacing:.25em;}
+    .menu-card,.leader{padding:20px 18px;}
+    .row{flex-direction:column;gap:0;}
+    .row dt{flex:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="cup" aria-hidden="true">🍧</div>
+  <h1>KAKIGORI<span class="jp">かき氷</span></h1>
+  <p class="lead">ふわふわの氷で、暑さをひと休み。</p>
+</header>
+
+<div class="wrap">
+
+  <h2 class="section-title">メニュー</h2>
+
+  <section class="menu-card">
+    <div class="menu-name">メニュー 1</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+  <section class="menu-card">
+    <div class="menu-name">メニュー 2</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+  <section class="menu-card">
+    <div class="menu-name">メニュー 3</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+  <h2 class="section-title">リーダーからの一言</h2>
+  <section class="leader">
+    <p>（ここに一言を入れてください）</p>
+  </section>
+
+  <a class="back" href="https://enube1115.github.io/Ncanfes-hakataminami-2026/">← 本サイトに戻る</a>
+
+  <footer>N高キャンパスフェスティバル 2026</footer>
+</div>
+
+</body>
+</html>
