@@ -137,7 +137,12 @@
     box-shadow:0 8px 24px var(--shadow);
     text-align:center;
   }
-  .leader p{font-size:1.05rem;}
+  .leader p{
+    font-size:1.35rem;
+    font-weight:700;
+    letter-spacing:.04em;
+    color:var(--syrup-blue);
+  }
 
   /* ===== 戻るリンク・フッター ===== */
   .back{
@@ -190,7 +195,7 @@
     .menu-name{font-size:1.05rem;}
     .row{flex-direction:column;gap:2px;padding:6px 0;font-size:.9rem;}
     .row dt{flex:none;font-size:.8rem;letter-spacing:.05em;}
-    .leader p{font-size:.98rem;}
+    .leader p{font-size:1.15rem;}
     .back{max-width:100%;padding:16px 18px;font-size:.95rem;}
     footer{font-size:.82rem;margin-top:36px;}
   }
@@ -218,6 +223,24 @@
 
   <h2 class="section-title">メニュー</h2>
 
+  <section class="menu-card c-red">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍓</span>いちご</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+  <section class="menu-card c-green">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍈</span>メロン</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
   <section class="menu-card c-blue">
     <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🌊</span>ブルーハワイ</div>
     <hr class="menu-rule">
@@ -228,62 +251,15 @@
     </dl>
   </section>
 
-  <section class="menu-card c-red">
-    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍓</span>いちご</div>
-    <hr class="menu-rule">
-    <dl>
-      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
-      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
-    </dl>
-  </section>
 
-  <section class="menu-card c-white">
-    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🥛</span>カルピス</div>
-    <hr class="menu-rule">
-    <dl>
-      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>乳成分</dd></div>
-      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
-    </dl>
-  </section>
 
-  <section class="menu-card c-green">
-    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍈</span>メロン</div>
-    <hr class="menu-rule">
-    <dl>
-      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
-      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
-    </dl>
-  </section>
-
-  <section class="menu-card c-brown">
-    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🥤</span>コーラ</div>
-    <hr class="menu-rule">
-    <dl>
-      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
-      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
-    </dl>
-  </section>
-
-  <section class="menu-card c-purple">
-    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍇</span>ぶどう</div>
-    <hr class="menu-rule">
-    <dl>
-      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
-      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
-    </dl>
-  </section>
 
 
   <p class="allergy-note">※シロップは仕入れる商品によって原材料が異なります。当日は実際の商品パッケージの表示をご確認ください。アレルギーが心配な方は、遠慮なくスタッフにお声がけください。</p>
 
   <h2 class="section-title">リーダーからの一言</h2>
   <section class="leader">
-    <p>（ここに一言を入れてください）</p>
+    <p>頭を冷やそう！</p>
   </section>
 
   <a class="back" href="https://enube1115.github.io/Ncanfes-hakataminami-2026/">← 本サイトに戻る</a>
