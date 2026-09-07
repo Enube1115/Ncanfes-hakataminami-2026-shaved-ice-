@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2f9bd6">
-<title>かき氷 | N高キャンパスフェスティバル 2026</title>
+<title>夏、削ってます。 | N高キャンパスフェスティバル 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Bungee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ice:#eaf6ff;
@@ -53,11 +53,12 @@
   }
   @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
   h1{
-    font-family:'Bungee',cursive;
-    font-size:2.6rem;
-    letter-spacing:.06em;
+    font-family:'Zen Maru Gothic',sans-serif;
+    font-weight:700;
+    font-size:2.4rem;
+    letter-spacing:.04em;
     color:var(--syrup-blue);
-    line-height:1.2;
+    line-height:1.35;
   }
   h1 .jp{
     display:block;
@@ -94,9 +95,23 @@
     border-top:5px solid var(--syrup-blue);
     transition:transform .25s ease, box-shadow .25s ease;
   }
-  .menu-card:nth-child(3n+1){border-top-color:var(--syrup-red);}
-  .menu-card:nth-child(3n+2){border-top-color:var(--syrup-blue);}
-  .menu-card:nth-child(3n+3){border-top-color:var(--syrup-green);}
+  .menu-card.c-blue{border-top-color:#2f9bd6;}
+  .menu-card.c-red{border-top-color:#ff4d6d;}
+  .menu-card.c-white{border-top-color:#9ec6dd;}
+  .menu-card.c-green{border-top-color:#4fc48a;}
+  .menu-card.c-brown{border-top-color:#8a5a3b;}
+  .menu-card.c-purple{border-top-color:#8e6ec8;}
+  .menu-emoji{font-size:1.5rem;line-height:1;}
+  .allergy-note{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    background:rgba(255,255,255,.7);
+    border-left:4px solid var(--syrup-red);
+    border-radius:10px;
+    padding:14px 16px;
+    margin-top:6px;
+    line-height:1.8;
+  }
   .menu-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px var(--shadow);}
   .menu-name{
     font-size:1.2rem;font-weight:700;
@@ -195,7 +210,7 @@
 
 <header>
   <div class="cup" aria-hidden="true">🍧</div>
-  <h1>KAKIGORI<span class="jp">かき氷</span></h1>
+  <h1>夏、削ってます。<span class="jp">かき氷</span></h1>
   <p class="lead">ふわふわの氷で、暑さをひと休み。</p>
 </header>
 
@@ -203,35 +218,68 @@
 
   <h2 class="section-title">メニュー</h2>
 
-  <section class="menu-card">
-    <div class="menu-name">メニュー 1</div>
+  <section class="menu-card c-blue">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🌊</span>ブルーハワイ</div>
     <hr class="menu-rule">
     <dl>
-      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
       <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
     </dl>
   </section>
 
-  <section class="menu-card">
-    <div class="menu-name">メニュー 2</div>
+  <section class="menu-card c-red">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍓</span>いちご</div>
     <hr class="menu-rule">
     <dl>
-      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
       <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
     </dl>
   </section>
 
-  <section class="menu-card">
-    <div class="menu-name">メニュー 3</div>
+  <section class="menu-card c-white">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🥛</span>カルピス</div>
     <hr class="menu-rule">
     <dl>
-      <div class="row"><dt>材料</dt><dd>後ほど追加予定</dd></div>
-      <div class="row"><dt>アレルギー</dt><dd>後ほど追加予定</dd></div>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>乳成分</dd></div>
       <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
     </dl>
   </section>
+
+  <section class="menu-card c-green">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍈</span>メロン</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+  <section class="menu-card c-brown">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🥤</span>コーラ</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+  <section class="menu-card c-purple">
+    <div class="menu-name"><span class="menu-emoji" aria-hidden="true">🍇</span>ぶどう</div>
+    <hr class="menu-rule">
+    <dl>
+      <div class="row"><dt>材料</dt><dd>氷、シロップ</dd></div>
+      <div class="row"><dt>アレルギー</dt><dd>特定原材料等28品目 該当なし</dd></div>
+      <div class="row"><dt>チケット</dt><dd>〇枚</dd></div>
+    </dl>
+  </section>
+
+
+  <p class="allergy-note">※シロップは仕入れる商品によって原材料が異なります。当日は実際の商品パッケージの表示をご確認ください。アレルギーが心配な方は、遠慮なくスタッフにお声がけください。</p>
 
   <h2 class="section-title">リーダーからの一言</h2>
   <section class="leader">
